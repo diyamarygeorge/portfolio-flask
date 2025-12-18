@@ -3,214 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diya Mary George | Portfolio</title>
-   
+    <title>Diya Mary George | Developer</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">DMG</h1>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education </a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <div class="background-grain"></div>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Diya.</a>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Work</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h2 class="animate-fade-in">Hello, I'm DIYA</h2>
-                <p class="animate-slide-up">A passionate MCA student and budding developer focused on building clean, efficient web applications.</p>
-                <a href="#contact" class="btn animate-scale-up">Get In Touch</a>
-            </div>
-            <div class="hero-image animate-fade-in">
-                 <img src="{{ url_for('static', filename='diy_toonified.png') }}" alt="Diya Toonified">
-
+        <section id="hero" class="hero">
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <span class="badge reveal-stagger">Full Stack Developer</span>
+                    <h1 class="hero-title reveal-stagger apple-text-gradient">Crafting digital experiences<br>with code & design.</h1>
+                    <p class="hero-subtitle reveal-stagger">
+                        I'm Diya Mary George, an MCA student and developer building accessible, pixel-perfect, and performant web applications.
+                    </p>
+                    <div class="hero-cta reveal-stagger">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
                 </div>
+                <div class="hero-image-wrapper reveal-stagger">
+                    <div class="image-border-gradient">
+                        <img src="{{ url_for('static', filename='diy_toonified.png') }}" alt="Diya Mary George" class="hero-avatar">
+                    </div>
+                    <div class="hero-blob"></div>
+                </div>
+            </div>
         </section>
 
-        <section id="about" class="content-section about-section-animated">
+        <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title">👤 About Me</h2>
-                
-                <div class="about-content-box">
+                <span class="section-label">About</span>
+                <div class="about-content">
                     <p>
-                        As an MCA student and BCA graduate from Sacred Heart College, I’ve built a strong foundation in software development through academic learning and hands-on experience. I’ve worked as a Front-End Developer at Petra and as an EmpowerHer Intern at Talrop, gaining practical skills in development, teamwork, and product workflows. I’m also expanding my knowledge through IBM SkillsBuild certifications in Prompt Engineering and AI. Passionate about coding and problem-solving, I enjoy learning new technologies and aim to grow into a capable full-stack developer who can build reliable and impactful applications.
+                        I am currently pursuing my <strong>Master of Computer Applications (MCA)</strong> at Rajagiri College of Social Sciences. 
+                        With a background in Computer Applications (BCA) and hands-on experience as a Front-End Developer at Petra, 
+                        I bridge the gap between design and engineering.
+                    </p>
+                    <p>
+                        I'm passionate about exploring new technologies, from <strong>AI prompt engineering</strong> to modern web frameworks. 
+                        My goal is to build software that is not just functional, but delightful to use.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="education" class="content-section">
+        <section id="skills" class="section">
             <div class="container">
-                <h2 class="section-title">🎓 Education </h2>
-                
-                <div class="subsection">
-                    <h3>Education History</h3>
-                    <div class="education-grid">
-                        
-                        <div class="education-card animate-hover-lift">
-                            <h4>Masters of Computer Application (MCA)</h4>
-                            <p class="institution">Rajagiri College of Social Science</p>
-                            <p class="date">2025 - 2027</p>
-                            <i class="fas fa-graduation-cap card-icon"></i>
-                        </div> 
-                        
-                        <div class="education-card animate-hover-lift">
-                            <h4>Bachelors of Computer Application (BCA)</h4>
-                            <p class="institution">Sacred Heart College, Thevara</p>
-                            <p class="date">2022 - 2025</p>
-                            <i class="fas fa-graduation-cap card-icon"></i>
-                        </div>
-                        
-                        <div class="education-card animate-hover-lift">
-                            <h4>Higher Secondary School</h4>
-                            <p class="institution">Don Bosco Senior Secondary</p>
-                            <p class="date">2020 - 2022</p>
-                            <i class="fas fa-school card-icon"></i>
+                <span class="section-label">Skills</span>
+                <div class="skills-wrapper">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skill-list">
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>C++</span>
+                            <span>Java</span>
+                            <span>C</span>
+                            <span>SQL</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="subsection">
-                    <h3>Technical Skills</h3>
-                    <div class="skills-grid">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Python (Flask)</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Git & GitHub</span>
+                    <div class="skill-category">
+                        <h3>Web & Tools</h3>
+                        <div class="skill-list">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Flask</span>
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>Figma</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="content-section">
+        <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title">🚀 Projects </h2>
-                
-                <div class="project-grid">
-                    <div class="project-card animate-hover-scale">
-                        <h4>CastMe</h4>
-                        <p>CastMe is a casting and talent management platform that connects artists and casting directors, offering features like profiles, casting calls, workshops, mentorship, and communication. It is built using Flutter for the mobile app, HTML & CSS for the admin panel, Python (Flask) for the backend, and MySQL for database management.</p>
+                <span class="section-label">Projects</span>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3>CastMe</h3>
+                            <p>A casting and talent management platform connecting artists with directors. Features profiles, casting calls, and mentorship workshops.</p>
+                            <div class="tags">
+                                <span>Flutter</span>
+                                <span>Flask</span>
+                                <span>MySQL</span>
+                            </div>
                         </div>
-                    
-                    <div class="project-card animate-hover-scale">
-                        <h4>Art Gallery Web Application</h4>
-                        <p>A responsive website built to display artworks dynamically using data stored in a MySQL database. The project focuses on clean design and structured data handling. Technologies: HTML, CSS, JavaScript, MySQL</p>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-content">
+                            <h3>Art Gallery Web App</h3>
+                            <p>A dynamic artwork display platform with a focus on clean design and structured data handling.</p>
+                            <div class="tags">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>MySQL</span>
+                            </div>
                         </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="content-section experience-section">
+        <section id="experience" class="section">
             <div class="container">
-                <h2 class="section-title">💼 Experience</h2>
+                <span class="section-label">Experience</span>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h4>Front-End Developer & UI/UX Designer</h4>
-                        <p>Pet.Ra | Aug '23 - Present</p>
-                        <ul>
-                            <li>Currently working as a UI/UX Designer and Front-End Developer at Petra.</li>
-                            <li>Responsible for designing intuitive user interfaces and developing front-end solutions to enhance user experiences across web and mobile platforms.</li>
-                        </ul>
-                        <span class="timeline-dot"></span>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <h4>EmpowerHer Intern – Technology & Leadership Development</h4>
-                        <p>Talrop | Aug '24 - Feb '25</p>
-                        <ul>
-                            <li>Participated in the EmpowerHer Internship Program at Talrop, focusing on technology, leadership, and personal development.</li>
-                        </ul>
-                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">Aug '23 — Present</div>
+                        <div class="timeline-content">
+                            <h3>Front-End Developer & UI/UX Designer</h3>
+                            <div class="company">Pet.Ra</div>
+                            <p>Designing intuitive interfaces and developing front-end solutions for web and mobile platforms.</p>
+                        </div>
                     </div>
 
                     <div class="timeline-item">
-                        <h4>Front-End Developer Intern (Flutter)</h4>
-                        <p>WeCodeLife · Edapally | May '24 - May '24</p>
-                        <ul>
-                            <li>Completed a 1-month internship, focusing on Flutter for cross-platform mobile application development.</li>
-                        </ul>
-                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">Aug '24 — Feb '25</div>
+                        <div class="timeline-content">
+                            <h3>EmpowerHer Intern</h3>
+                            <div class="company">Talrop</div>
+                            <p>Technology & Leadership Development program focused on professional growth and product workflows.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">May '24</div>
+                        <div class="timeline-content">
+                            <h3>Front-End Developer Intern</h3>
+                            <div class="company">WeCodeLife</div>
+                            <p>Focused on cross-platform mobile application development using Flutter.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="certifications" class="content-section">
+        <section id="education" class="section">
             <div class="container">
-                <h2 class="section-title">🏆 Certifications & Workshops</h2>
-                
-                <div class="cert-grid">
-                    
-                    <div class="cert-card formal-cert animate-hover-scale">
-                        <i class="fas fa-award icon"></i>
-                        <h4>IBM SkillsBuild AI: Prompt Engineering</h4>
-                        <p class="issuer">IBM SkillsBuild Student Ambassador Program</p>
-                        <p class="date">Dec '24 | Expires: Jan '25</p>
-                        <p class="description">Completed a specialized course focused on the principles and best practices of prompt engineering.</p>
+                <span class="section-label">Education</span>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025 — 2027</div>
+                        <div class="timeline-content">
+                            <h3>Master of Computer Applications (MCA)</h3>
+                            <div class="company">Rajagiri College of Social Sciences</div>
+                        </div>
                     </div>
-
-                    <div class="cert-card workshop-card animate-hover-scale">
-                        <i class="fas fa-code icon-workshop"></i>
-                        <h4>Website Designing Workshop</h4>
-                        <p class="description">Completed a hands-on workshop on HTML, CSS, MySQL, and PHP, gaining practical experience in web development and database integration.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 — 2025</div>
+                        <div class="timeline-content">
+                            <h3>Bachelor of Computer Applications (BCA)</h3>
+                            <div class="company">Sacred Heart College, Thevara</div>
+                        </div>
                     </div>
-
-                    <div class="cert-card workshop-card animate-hover-scale">
-                        <i class="fas fa-brain icon-workshop"></i>
-                        <h4>Critical Thinking & Innovative Design Workshop</h4>
-                        <p class="description">Participated in a workshop focused on problem-solving, critical thinking, and innovative design approaches.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020 — 2022</div>
+                        <div class="timeline-content">
+                            <h3>Higher Secondary School</h3>
+                            <div class="company">Don Bosco Senior Secondary</div>
+                        </div>
                     </div>
-                    
-                    <div class="cert-card workshop-card animate-hover-scale">
-                        <i class="fas fa-microchip icon-workshop"></i>
-                        <h4>Emerging Technology Workshop</h4>
-                        <p class="description">Attended a workshop on emerging technologies, gaining awareness of current trends and real-world applications.</p>
-                    </div>
-                    
                 </div>
             </div>
         </section>
 
+        <section id="certifications" class="section">
+            <div class="container">
+                <span class="section-label">Certifications</span>
+                <ul class="cert-list">
+                    <li>
+                        <span class="cert-name">IBM SkillsBuild AI: Prompt Engineering</span>
+                        <span class="cert-issuer">IBM</span>
+                    </li>
+                    <li>
+                        <span class="cert-name">Website Designing Workshop</span>
+                        <span class="cert-issuer">Workshop</span>
+                    </li>
+                    <li>
+                        <span class="cert-name">Critical Thinking & Innovative Design</span>
+                        <span class="cert-issuer">Workshop</span>
+                    </li>
+                    <li>
+                        <span class="cert-name">Emerging Technology Workshop</span>
+                        <span class="cert-issuer">Workshop</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-        <section id="contact" class="content-section">
-            <div class="container contact-info">
-                <h2 class="section-title">📧 Contact Me</h2>
-                <p>I'm currently looking for new opportunities. Feel free to reach out!</p>
-                <div class="contact-details">
-                    <p><i class="fas fa-envelope icon"></i> Email: <a href="mailto:diyamar007@gmail.com">diyamar007@gmail.com</a></p>
-                    <p><i class="fas fa-phone icon"></i> Phone: +91 8590781707</p>
-                    <p><i class="fas fa-map-marker-alt icon"></i> Kochi, kerala, India</p>
+        <section id="contact" class="section">
+            <div class="container contact-container">
+                <h2 class="contact-title">Let's build something together.</h2>
+                <div class="contact-links">
+                    <a href="mailto:diyamar007@gmail.com" class="contact-link">
+                        <i class="far fa-envelope"></i> diyamar007@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/dmg007" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/diyamarygeorge" target="_blank" class="contact-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/dmg007" target="_blank" class="social-icon animate-hover-jiggle"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/diyamarygeorge" target="_blank" class="social-icon animate-hover-jiggle"><i class="fab fa-github"></i></a>
-                    <a href="https://twitter.com/@Diya2239" target="_blank" class="social-icon animate-hover-jiggle"><i class="fab fa-twitter"></i></a>
-                </div>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Kochi, Kerala, India</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Diya Mary George. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Diya Mary George. Designed & Built with care.</p>
+        </div>
     </footer>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-
 </body>
 </html>
